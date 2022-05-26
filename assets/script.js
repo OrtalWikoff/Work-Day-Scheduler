@@ -1,5 +1,5 @@
 //The current day is displayed at the top of the calendar 
-//Add save butten event listener (on click) and set item in a local storage
+//Added save butten event listener (on click) and set item in a local storage
 $(document).ready(function() {
     var todayDate = moment().format("dddd, MMMM Do YYYY, h:mm:ss a"); 
     $("#currentDay").text(todayDate);
@@ -12,14 +12,14 @@ $(document).ready(function() {
 //Time block are color-coded to indicate whether it is in the past, present, or future
 
 function pastPresenFuture(){
-//first I need to get the current number of hours
+//Get the current number of hours
     var timeNow = moment().hour();
-//secound I need to loop over time blocks (.each)
+//Loop over time blocks (.each)
  $(".time-block").each(function() {
 //The parseInt() function parses a string argument and returns an integer of the specified radix
 //The attr() get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element.
      var blockOfTime = parseInt($(this).attr("id").split("-")[1])
-//third I need to check the time and add the classes for background colors.
+//Check the time and add the classes for background colors.
 if (blockOfTime<timeNow){
     $(this).removeClass("future");
     $(this).removeClass("present");
@@ -48,7 +48,6 @@ if (blockOfTime<timeNow){
     $("#h-15 .TextArea").val(localStorage.getItem("h-15"));
     $("#h-16 .TextArea").val(localStorage.getItem("h-16"));
     $("#h-17 .TextArea").val(localStorage.getItem("h-17"));
-
 })
 
 
