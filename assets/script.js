@@ -1,8 +1,8 @@
-//The current day is displayed at the top of the calendar 
-//Added save butten event listener (on click) and set item in a local storage
 $(document).ready(function() {
+    //The current day is displayed at the top of the calendar 
     var todayDate = moment().format("dddd, MMMM Do YYYY, h:mm:ss a"); 
     $("#currentDay").text(todayDate);
+    //Added save butten event listener (on click) and set item in a local storage
     $(".saveBtn").on("click", function(){
     var textInput = $(this).siblings(".TextArea").val();
     var timeInput = $(this).parent().attr("id");
@@ -36,7 +36,6 @@ if (blockOfTime<timeNow){
  })
 }
     pastPresenFuture()
-
 //get items from local storage back to TextArea
     $("#h-8 .TextArea").val(localStorage.getItem("h-8"));
     $("#h-9 .TextArea").val(localStorage.getItem("h-9"));
