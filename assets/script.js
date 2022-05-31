@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    //The current day is displayed at the top of the calendar 
+    //The current day that displayed at the top of the calendar 
     var todayDate = moment().format("dddd, MMMM Do YYYY, h:mm:ss a"); 
     $("#currentDay").text(todayDate);
     //Added save butten event listener (on click) and set item in a local storage
@@ -14,7 +14,7 @@ $(document).ready(function() {
 function pastPresenFuture(){
 //Get the current number of hours
     var timeNow = moment().hour();
-//Loop over time blocks (.each)
+//Loop over time blocks
  $(".time-block").each(function() {
 //The parseInt() function parses a string argument and returns an integer of the specified radix
 //The attr() get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element.
