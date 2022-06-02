@@ -14,6 +14,7 @@ $(document).ready(function() {
 function pastPresenFuture(){
 //Get the current number of hours
     var timeNow = moment().hour();
+    
 //Loop over time blocks
  $(".time-block").each(function() {
 //The parseInt() function parses a string argument and returns an integer of the specified radix
